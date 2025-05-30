@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
+
 *
 {
     margin: 0;
@@ -10,11 +12,26 @@ html, body
     height: 100%;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* ajusta a opacidade aqui */
+    z-index: 0;
+    pointer-events: none; 
+}
+
 body
 {
+     position: relative;
+    z-index: 1;
     /* texto do site */
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 0%;
 
     font-size: 1.5em;
     font-weight: 600;
@@ -37,14 +54,15 @@ header
     flex-direction: column;
 }
 
-header h1 
-{
-    color: black;
-    font-size: 4em;
-    font-weight: 900;
-
-    margin-bottom: 20px;
+header h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3.2em;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(247, 247, 247); /* verde escuro, forte e harmonioso */
 }
+
+
 
 header div
 {
@@ -94,7 +112,6 @@ main div p
     animation: fadeInUp 1s ease-out;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
-
 
 .rodape:hover {
     background: linear-gradient(135deg, #1a1a1a, #333333);
