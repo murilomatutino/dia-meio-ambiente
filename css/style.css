@@ -82,28 +82,25 @@ main div p
     text-align: justify;
 }
 
-footer
-{
-    height: 100px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@media screen and (max-width: 480px) {
-  header h1
-  {
-    font-size: 2em;
-  }
-
-  p 
-  {
-    font-size: 0.8em;
-  }
-
-  main div p
-  {
+.rodape {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #f0f0f0;
     text-align: center;
-  }
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    font-size: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.6s ease;
+    animation: fadeInUp 1s ease-out;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
 }
+
+
+.rodape:hover {
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    color: #ffffff;
+    transform: scale(1.015);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/**/
