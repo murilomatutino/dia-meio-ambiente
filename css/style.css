@@ -42,6 +42,8 @@ header h1
     color: black;
     font-size: 4em;
     font-weight: 900;
+
+    margin-bottom: 20px;
 }
 
 header div
@@ -87,4 +89,21 @@ footer
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  header h1
+  {
+    font-size: 2em;
+  }
+
+  p 
+  {
+    font-size: 0.8em;
+  }
+
+  main div p
+  {
+    text-align: center;
+  }
 }
