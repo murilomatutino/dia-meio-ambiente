@@ -12,26 +12,13 @@ html, body
     height: 100%;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4); /* ajusta a opacidade aqui */
-    z-index: 0;
-    pointer-events: none; 
-}
-
 body
 {
-     position: relative;
+    position: relative;
     z-index: 1;
     /* texto do site */
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0%;
 
     font-size: 1.5em;
     font-weight: 600;
@@ -82,11 +69,11 @@ main
     justify-content: center;
 }
 
-main div
+#box-text
 {
     background-color: whitesmoke;
     width: 70%;
-    opacity: 80%;
+    opacity: 70%;
 
     border-radius: 10px;
 
@@ -100,24 +87,60 @@ main div p
     text-align: justify;
 }
 
-.rodape {
-    background: linear-gradient(135deg, #000000, #1a1a1a);
-    color: #f0f0f0;
-    text-align: center;
-    padding: 20px;
-    border-radius: 20px 20px 0 0;
-    font-size: 13px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.6s ease;
-    animation: fadeInUp 1s ease-out;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
 }
 
-.rodape:hover {
-    background: linear-gradient(135deg, #1a1a1a, #333333);
-    color: #ffffff;
-    transform: scale(1.015);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+#box-imagens
+{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    opacity: 100%;
+
+    margin-bottom: 20px;
 }
 
-/**/
+#box-imagens img
+{
+    width: 250px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 480px) {
+
+    header h1 
+    {
+        font-size: 2em;
+    }
+
+    p
+    {
+        font-size: 0.8em;
+    }
+
+    #box-text
+    {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #box-imagens
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #box-imagens img
+    {
+        width: 200px;
+    }
+}
